@@ -1,8 +1,8 @@
 # Dida Hotel MCP — Hotel Search & Booking
 
-[![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/RollingGo-AI/rollinggo-hotel-mcp/releases)
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/DIDA-AI/dida_hotel_mcp_global/releases)
 [![ModelScope](https://img.shields.io/badge/ModelScope-Rank%237-brightgreen.svg)](https://modelscope.cn/)
-[![Calls](https://img.shields.io/badge/Calls-847.3k-orange.svg)](https://github.com/RollingGo-AI/rollinggo-hotel-mcp)
+[![Calls](https://img.shields.io/badge/Calls-847.3k-orange.svg)](https://github.com/DIDA-AI/dida_hotel_mcp_global)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
@@ -56,7 +56,7 @@ Official product backed by Asia's #1 and world's #3 B2B travel platform, DIDA, t
 3. ⚠️ Check your email (including spam folder) for the API Key
 4. **Limited-Time Offer**: All developers who complete their first tool call within 3 days of receiving the API Key unlock **permanent unlimited free access**. We prioritize developers with real needs and execution speed, offering zero-cost access to complete hotel MCP capabilities.
 
-> The email includes both hotel and flight MCP endpoints – 1 key for both. We've also published [RollingGo Flight MCP](https://github.com/RollingGo-AI/rollinggo-flight-mcp.git).
+> The email includes both hotel and flight MCP endpoints – 1 key for both.
 
 
 
@@ -78,7 +78,7 @@ We only use this information for key provisioning, integration support, and serv
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/RollingGo-AI/rollinggo-ai-hotel.git dida_hotel_mcp_global
+git clone https://github.com/DIDA-AI/dida_hotel_mcp_global.git dida_hotel_mcp_global
 cd dida_hotel_mcp_global
 ```
 
