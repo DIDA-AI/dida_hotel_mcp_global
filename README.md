@@ -2,397 +2,157 @@
 
 [![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/DIDA-AI/dida_hotel_mcp_global/releases)
 [![ModelScope](https://img.shields.io/badge/ModelScope-Rank%237-brightgreen.svg)](https://modelscope.cn/)
-[![Calls](https://img.shields.io/badge/Calls-847.3k-orange.svg)](https://github.com/DIDA-AI/dida_hotel_mcp_global)
+[![MCP Version](https://img.shields.io/badge/MCP-1.0.0-blue.svg)](https://modelcontextprotocol.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Smithery Badge](https://smithery.ai/badge/@dida-ai/dida-hotel-mcp-global)](https://smithery.ai/server/@dida-ai/dida-hotel-mcp-global)
 
-🏠 [Homepage](https://global.rollinggo.store/) · 🚀[ Quick Start](#-quick-start) · 🔧[ Tools](#tools) · 📚[ Examples](#usage-examples) · 💬[ Support](#-support)
+DIDA Hotel MCP Server Global is designed specifically for **global users and overseas travel scenarios**.
 
+> 💡 **For Chinese users** or workflows primarily targeting the mainland China market and local payment systems, please refer to the localized version:
+> 👉 [**Dida-hotel-MCP-CN**](https://github.com/DIDA-AI/Dida-hotel-MCP-CN)
 
+An official Model Context Protocol (MCP) server that empowers AI Agents to search, compare, and book **over 2 Million hotels globally**. Powered by DIDA (Asia's #1 and world's #3 B2B travel platform), this server bridges the gap between AI travel recommendations and real-world bookings.
 
-## Why Dida Hotel MCP?
+🏠 [Partner Center](https://global.rollinggo.store/) · 🚀 [Quick Start](#-quick-start) · 🔧 [Available Tools](#-available-tools) · 📚 [Config Examples](#-mcp-client-configuration) · 💬 [Support](#-support)
 
-**Dida Hotel MCP** provides AI agents and MCP clients with hotel booking capabilities, designed for developers, AI builders, travel product teams, and enterprise travel scenarios who want to integrate hotel transaction functionality into their AI products. **Both enterprises and individuals can access it completely free with one-click setup.**
+---
 
-Official product backed by Asia's #1 and world's #3 B2B travel platform, DIDA, transforming AI "asking about hotels" into "completing full hotel booking workflows":
+## 🌟 Why DIDA Hotel MCP Server Global?
 
-- **2 Million Global Hotels**: Coverage of all major global destinations
-- **110K+ Direct Partner Hotels**: Real-time price and inventory responses
-- **500+ Global Suppliers**: Covering global, regional, and local hotel brands to meet diverse user needs
+Traditional AI agents can only recommend hotels based on static training datasets. The **DIDA Hotel MCP Server Global** equips your LLM agent with direct, real-time transactional capabilities:
 
+* 🏨 **2M+ Global Hotels**: Deep coverage of major destinations worldwide, returning multilingual room details.
+* ⚡ **110K+ Direct Partner Rates**: Live inventory checks, rate locks, and cancellation policy checks, ensuring the agent recommendations are bookable in real-time.
+* 💰 **Monetization Ready**: Configure your own markups in the DIDA Partner Center. When users book via your AI assistant, **you earn commissions directly**.
+* 🔌 **Client-Ready**: Instant integration with Cursor, Claude Desktop, Windsurf, ChatGPT, and other MCP-compliant applications.
 
+---
 
-## Who Is This For?
+## 🎯 Target Use Cases
 
-- Individual users with hotel search, price comparison, or flight monitoring needs
-- Teams or developers building AI agents
-- Developers looking to integrate hotel booking capabilities into MCP clients
-- Developers building travel planning, business travel management, OTA, or lifestyle service agents
-- Product teams validating AI agent business transaction workflows
+* **AI Travel Planners**: Integrate hotel searching directly into natural language itineraries.
+* **Corporate Travel Assistants**: Allow employees to query, compare, and book business travel within Slack, Teams, or custom chat interfaces.
+* **Transactional Demos**: Validate end-to-end AI agent commerce and payment flows without heavy backend integration.
 
-
-
-## What Is This For?
-
-- **General AI Agents**: Enable your agents with direct hotel booking capabilities, allowing users to complete workflows from demand understanding, intelligent recommendations, price comparison to order in natural conversation
-- **AI Travel Assistant**: Intelligently recommend hotels based on user destinations, dates, budgets, and preferences, supporting multi-dimensional requirement matching
-- **MCP / Agent Demo**: Students/learners quickly validate "AI agents directly completing hotel transactions" capabilities, building complete, demonstrable workflows
-- Integrate hotel capabilities into **Claude, Cursor, Cherry Studio, ChatGPT MCP Client** or other MCP-compliant clients
-
-⚠️ **Note**: If you're using platforms like ClawHub, DingXiang, or Qclaw, please use our [RollingGo Flight & Hotel Booking Skill](https://rollinggo.store/docs/skill-docs/skill-config) for details.
-
-
+---
 
 ## 🚀 Quick Start
 
-> 💡 In summary, you only need to do two things: apply for an API Key and configure it in your AI assistant. **No coding required** – any MCP-compliant AI assistant gains hotel search capabilities in 5 minutes with your first tool call.
+Integrate global hotel search and booking into your AI assistant in under **5 minutes** with no coding required.
 
-### Step 1: Get Your API Key
+### Step 1: Get Your Developer API Key
 
-1. [Visit the Application Page](https://global.rollinggo.store/apply)
-2. Fill in basic information – automatic approval within 1-3 minutes. You'll receive an email containing:
-   - API Key
-   - Partner Center account (login + initial password) to configure markups, view orders, and check earnings
-3. ⚠️ Check your email (including spam folder) for the API Key
-4. **Limited-Time Offer**: All developers who complete their first tool call within 3 days of receiving the API Key unlock **permanent unlimited free access**. We prioritize developers with real needs and execution speed, offering zero-cost access to complete hotel MCP capabilities.
+1. Go to the [DIDA Partner Center](https://global.rollinggo.store/apply) and sign up for a free key.
+2. Fill in your basic information. Approval is automated and takes 1–3 minutes. You will receive an email containing:
+   - Your `mcp_` prefixed API Key.
+   - Credentials for your B2B Partner Center dashboard (to monitor orders, configure markup, and track earnings).
 
-> The email includes both hotel and flight MCP endpoints – 1 key for both.
+---
 
+### Step 2: Running the Server
 
+Choose one of the methods below to run the server.
 
-**Why Do We Require Information for API Key Application?**
-
-Since hotel prices, inventory, and order capabilities involve real transaction workflows, we need to provision **free, dedicated keys for each developer**. This approach helps us:
-
-- Provision appropriate access permissions for free
-- Provide technical support during integration
-- Understand your use case and reduce invalid configuration costs
-- Protect API stability and prevent malicious calls or unusual traffic
-- Quickly contact you about test orders, price queries, and inventory validation
-
-We only use this information for key provisioning, integration support, and service security.
-
-
-### Step 2: Setup & Running
-
-### 1. Clone the Repository
-
+#### Method A: Run via `uv` (Recommended - Zero Config Setup)
+If you have [uv](https://github.com/astral-sh/uv) installed, run the server instantly:
 ```bash
-git clone https://github.com/DIDA-AI/dida_hotel_mcp_global.git dida_hotel_mcp_global
+uv run --with-requirements requirements.txt server.py
+```
+
+#### Method B: Standard Python Setup
+```bash
+# Clone the repository
+git clone https://github.com/DIDA-AI/dida_hotel_mcp_global.git
 cd dida_hotel_mcp_global
-```
 
-### 2. Install Dependencies
-
-```bash
+# Setup virtual environment
 python -m venv venv
-venv\Scripts\activate   # Windows
-# source venv/bin/activate   # Linux/Mac
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies and run
 pip install -r requirements.txt
-```
-
-### 3. Start the Server
-
-```bash
 python server.py
 ```
+The local server will run on `http://localhost:8000/mcp`, automatically forwarding requests to the secure DIDA global API nodes.
 
-Default MCP endpoint: `http://127.0.0.1:8000/mcp`
+---
 
-The local server forwards tool calls to the RollingGo backend at `https://mcp.rollinggo.ai/mcp` using your API key.
+## ⚙️ MCP Client Configuration
 
-### 4. Pass API Key via Headers in MCP Client
-
-The server does **not** read the API Key from `.env`. Configure request headers in your MCP client:
-
-- Recommended: `Authorization: Bearer YOUR_API_KEY`
-- Alternative: `X-Secret-Key: YOUR_API_KEY`
-
-> **Important:**
-> - Apply for an API Key at https://global.rollinggo.store/apply
-> - API Keys must start with `mcp_`
-> - Missing or malformed keys will cause request failures
-
-## MCP Client Configuration
+### 1. Claude Desktop (Stdio / Local Subprocess)
+Best for local desktop workflows. Add this to your Claude Desktop configuration file (typically `~/Library/Application Support/Claude/claude_desktop_config.json`):
 
 ```json
 {
   "mcpServers": {
-    "Dida-Hotel-MCP": {
-      "url": "http://localhost:8000/mcp",
-      "type": "http",
-      "headers": {
-        "Authorization": "Bearer YOUR_API_KEY",
-        "Accept-Language": "en_US"
+    "dida-hotel-mcp": {
+      "command": "python",
+      "args": ["/absolute/path/to/dida_hotel_mcp_global/server.py"],
+      "env": {
+        "Authorization": "Bearer YOUR_API_KEY"
       }
     }
   }
 }
 ```
+*(Make sure to replace `/absolute/path/to/...` and `YOUR_API_KEY` with your actual local path and key).*
 
-
-
-## Tools
-
-The server provides 3 tools:
-
-1. `searchHotels` — Search hotels by location, dates, star rating, guest count, tags, etc.
-2. `getHotelDetail` — Get real-time room types and pricing for a specific hotel
-3. `getHotelSearchTags` — Retrieve tag metadata usable in `searchHotels.hotelTags`
-
-### 1) searchHotels
-
-#### Input Parameters
-
-- `originQuery` (string, **required**): The user's original query.
-- `place` (string, **required**): Location name — be as specific as possible (city / airport / attraction / detailed address, etc.).
-- `placeType` (string, **required**): Location type. Supported values: `city`, `airport`, `point_of_interest`, `train_station`, `subway_station`, `hotel`, `district/county`, `detailed address`.
-- `countryCode` (string, optional): ISO 3166-1 alpha-2 country code, e.g. `CN`, `US`.
-- `size` (number, optional, default: `5`): Number of hotels to return, max `20`.
-- `checkInParam` (object, optional): Check-in related parameters.
-- `filterOptions` (object, optional): Filter parameters.
-- `hotelTags` (object, optional): Tag / brand / budget filters.
-
-**`checkInParam` fields:**
-
-- `adultCount` (number, optional, default: `2`): Adults per room.
-- `checkInDate` (string, optional, format: `YYYY-MM-DD`): Check-in date. If omitted, in the past, or malformed, defaults to tomorrow.
-- `stayNights` (number, optional, default: `1`): Number of nights (max 28).
-
-**`filterOptions` fields:**
-
-- `distanceInMeter` (number, optional): Straight-line distance from POI in meters. Defaults to `2000` when a POI is used.
-- `starRatings` (number[], optional): Star rating range, defaults to `[0.0, 5.0]`, step `0.5`.
-
-**`hotelTags` fields:**
-
-- `requiredTags` (string[], optional): Required tags (hard constraint).
-- `preferredBrands` (string[], optional): Preferred brands.
-- `maxPricePerNight` (number, optional): Max budget per night (CNY).
-
-#### Output
-
-```json
-{
-  "message": "Hotel search succeeded",
-  "hotelInformationList": [
-    {
-      "hotelId": 43615,
-      "bookingUrl": "https://rollinggo.cn/pages/hotel/detail/index?...",
-      "name": "Sunworld Dynasty Hotel Beijing",
-      "brand": null,
-      "address": "50 Wangfujing Street",
-      "destinationId": "6140156",
-      "latitude": 39.917748,
-      "longitude": 116.412249,
-      "distanceInMeters": 205,
-      "starRating": 5.0,
-      "price": {
-        "message": "Price found, lowest: 626.0, currency: CNY",
-        "hasPrice": true,
-        "currency": "CNY",
-        "lowestPrice": 626.0
-      },
-      "areaCode": "CN",
-      "description": "...",
-      "imageUrl": "https://image-cdn.RollingGo.com/...",
-      "hotelAmenities": ["24h Front Desk", "WiFi"],
-      "score": 1.0,
-      "tags": ["Near Shopping Mall", "Free WiFi"]
-    }
-  ]
-}
-```
-
-> **Note:** `price` is an object, not a number. Fields may be missing or `null` depending on city/supply source.
-
-
-
-### 2) getHotelDetail
-
-#### Input Parameters
-
-- `hotelId` (number, optional): Hotel ID. Mutually exclusive with `name`; if both are provided, `hotelId` takes priority.
-- `name` (string, optional): Hotel name (fuzzy match).
-- `dateParam` (object, optional): Check-in / check-out date parameters.
-- `occupancyParam` (object, optional): Guest count and room count parameters.
-- `localeParam` (object, optional): Country and currency parameters.
-
-**`dateParam` fields:**
-
-- `checkInDate` (string, optional, format: `YYYY-MM-DD`): Check-in date. Defaults to tomorrow if empty, malformed, or in the past.
-- `checkOutDate` (string, optional, format: `YYYY-MM-DD`): Check-out date. Defaults to `checkInDate + 1` day if empty, malformed, or not after check-in.
-
-**`occupancyParam` fields:**
-
-- `adultCount` (number, optional, default: `2`): Adults per room.
-- `childCount` (number, optional, default: `0`): Children per room.
-- `childAgeDetails` (number[], optional): Child ages, e.g. `[3, 5]`.
-- `roomCount` (number, optional, default: `1`): Number of rooms.
-
-**`localeParam` fields:**
-
-- `countryCode` (string, optional, default: `US`): ISO 3166-1 alpha-2 country code.
-- `currency` (string, optional, default: `USD`): Currency code.
-
-#### Output
-
-```json
-{
-  "success": true,
-  "errorMessage": null,
-  "hotelId": 43615,
-  "bookingUrl": "https://rollinggo.cn/pages/hotel/detail/index?...",
-  "name": "Sunworld Dynasty Hotel Beijing",
-  "checkIn": "2026-03-05",
-  "checkOut": "2026-03-06",
-  "roomRatePlans": [
-    {
-      "roomTypeId": 4984714,
-      "roomName": "Superior Room",
-      "roomNameCn": "高级客房",
-      "ratePlanId": "7012072001634754626",
-      "ratePlanName": "Superior Room King Bed, 1 King Bed",
-      "bedType": 73,
-      "bedTypeDescription": "Unknown",
-      "currency": "CNY",
-      "totalPrice": 0,
-      "totalSalesRate": null,
-      "inventoryCount": null,
-      "isOnRequest": null,
-      "recommendIndex": null,
-      "cancellationPolicies": [
-        {
-          "fromDate": "2026-03-02T10:00:00+08:00",
-          "toDate": null,
-          "amount": 634,
-          "percent": null,
-          "type": null,
-          "description": null
-        }
-      ],
-      "includedFees": null,
-      "excludedFees": null,
-      "metadata": null
-    }
-  ]
-}
-```
-
-> **Note:** On failure, the response may contain an error message (e.g. "Failed to fetch pricing, please retry later") or structured error fields. The `roomRatePlans` array can be long — consider paginating or limiting display on the client side.
-
-
-
-### 3) getHotelSearchTags
-
-Retrieves available tags for use in `searchHotels.hotelTags`. Suitable for local caching and client-side intent mapping.
-
-#### Output
-
-```json
-{
-  "tags": [
-    {
-      "name": "Free WiFi",
-      "category": "Core Amenities",
-      "description": "Provides free WiFi"
-    }
-  ],
-  "usageGuide": {
-    "tagUsage": "Place tag names into hotelTags.preferredTags (preference), requiredTags (hard requirement), or excludedTags (exclusion)",
-    "exampleRequest": "{...}"
+### 2. Cursor / Windsurf (SSE / HTTP Transport)
+Add the local server URL under Cursor's MCP Settings page:
+* **Name**: Dida-Hotel-MCP
+* **Type**: `SSE`
+* **URL**: `http://localhost:8000/mcp`
+* **Headers (JSON)**:
+  ```json
+  {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Accept-Language": "en_US"
   }
-}
-```
+  ```
 
-**Common tag categories:**
+---
 
-- Brand & Ratings
-- Specialty Highlights
-- Core Amenities
-- Family & Kids
-- Service Details
-- Service & Dining
-- Transportation & Payment
-- Views & Room Types
-- Hotel Type
-- Pricing
+## 🔧 Available Tools
 
+The server registers 3 core tools to handle the complete search-to-book lifecycle:
 
+### 1. `searchHotels`
+Find hotels by location, date, price, star rating, and tags.
+* **Arguments**:
+  - `originQuery` (string, **required**): User's raw text request (e.g., "Find boutique hotels in Tokyo under $200").
+  - `place` (string, **required**): Specific destination, attraction, or airport name.
+  - `placeType` (string, **required**): Location type (`city`, `airport`, `point_of_interest`, `hotel`, etc.).
+  - `checkInParam` (object, optional): `checkInDate` (YYYY-MM-DD), `stayNights`, and `adultCount`.
+  - `filterOptions` (object, optional): `starRatings` (array of numbers), `distanceInMeter` (radius limit from POI).
+  - `hotelTags` (object, optional): `requiredTags`, `preferredBrands`, `maxPricePerNight`.
 
-## Usage Examples
+### 2. `getHotelDetail`
+Fetch real-time room types, dynamic pricing, inventory, and cancellation policies for a selected hotel.
+* **Arguments**:
+  - `hotelId` (number) or `name` (string) — to identify the hotel.
+  - `dateParam` (object, optional): `checkInDate` and `checkOutDate`.
+  - `occupancyParam` (object, optional): `roomCount`, `adultCount`, `childCount`.
+  - `localeParam` (object, optional): `currency` (e.g., `USD`, `EUR`) and `countryCode`.
 
-### Example 1: City Search
+### 3. `getHotelSearchTags`
+Retrieve metadata containing all filterable tag names (e.g., "Free WiFi", "Gym", "Kid-Friendly") to refine search filtering.
 
-```json
-{
-  "originQuery": "Find 4-star+ hotels in Beijing for 2 nights",
-  "place": "Beijing",
-  "placeType": "city",
-  "checkInParam": {
-    "checkInDate": "2026-03-01",
-    "stayNights": 2
-  },
-  "filterOptions": {
-    "starRatings": [4.0, 5.0]
-  },
-  "size": 5
-}
-```
+---
 
-### Example 2: With Tags and Budget Constraints
+## 🔑 Security & Headers
+* The local server forwards requests to the secure DIDA global API.
+* Always supply your API Key in the headers. Keys must start with `mcp_`.
+* **Required header**: `Authorization: Bearer mcp_your_key_here`
 
-```json
-{
-  "originQuery": "Find quality hotels in Beijing with free WiFi, budget under 1000 per night",
-  "place": "Beijing",
-  "placeType": "city",
-  "hotelTags": {
-    "requiredTags": ["Free WiFi"],
-    "maxPricePerNight": 1000
-  },
-  "size": 5
-}
-```
-
-### Example 3: Query Hotel Room Types and Pricing
-
-```json
-{
-  "hotelId": 43615,
-  "dateParam": {
-    "checkInDate": "2026-03-05",
-    "checkOutDate": "2026-03-06"
-  },
-  "occupancyParam": {
-    "adultCount": 2,
-    "roomCount": 1
-  },
-  "localeParam": {
-    "currency": "CNY",
-    "countryCode": "CN"
-  }
-}
-```
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
+---
 
 ## 💬 Support
-📧 Email: [york.lu@dida.com](mailto:york.lu@dida.com)
-
-### Scan to Join WeChat Group for Technical Support
+* 📧 **Email**: [york.lu@dida.com](mailto:york.lu@dida.com)
+* 🐛 **Issues**: Submit issues or feature requests on [GitHub Issues](https://github.com/DIDA-AI/dida_hotel_mcp_global/issues).
+* 👥 **WeChat Community**: Scan the QR code below for instant technical assistance (primarily Chinese-speaking developers).
 
 ![Support WeChat](support-wehcat%20group.png)
 
-
-Developer team is online to help you with:
-- ✅ Integration configuration guidance
-- ✅ API / MCP troubleshooting
-- ✅ Hotel search, pricing, and booking workflow explanations
-- ✅ Integration suggestions for your use case
-
-
-**Made with ❤️ by Dida Team**
+---
+**Made with ❤️ by the DIDA Team**
