@@ -14,7 +14,7 @@ DIDA Hotel MCP Server Global is designed specifically for **global users and int
 
 An official Model Context Protocol (MCP) server that empowers AI Agents to search, compare, and book **over 2 Million hotels globally**. Powered by DIDA (Asia's #1 and world's #3 B2B travel platform), this server bridges the gap between AI travel recommendations and real-world bookings.
 
-🏠 [Apply Key](https://global.rollinggo.store/) · 🚀 [Quick Start](#-quick-start) · 🔧 [Tools](#-available-tools) · 📚 [Examples](#-usage-examples) · 💬 [Support](#-support) · 🔍 [Q&A](#-qa) · 💰[MCP Monetization Guide](https://global.rollinggo.store/docs/partnerdoc/partner1) 
+🏠 [Apply Key](https://global.rollinggo.store/) · 🚀 [Quick Start](#-quick-start) · 🔧 [Tools](#-available-tools) · 📚 [Examples](#-usage-examples) · 💬 [Support](#-support) · 🔍 [Q&A](#-qa) · 💰[MCP Monetization](https://global.rollinggo.store/docs/partnerdoc/partner1) 
 
 ---
 
@@ -34,6 +34,7 @@ Traditional AI agents can only recommend hotels based on static training dataset
 ✅ **Price Edge at Source** — Priced upstream of OTAs; sharp rates on hot spots.
 
 ✅ **Agent-Ready** — Works out of the box with 40+ leading AI coding agents: Cursor, Claude Code, Codex, Windsurf, Copilot, and more.
+✅ **Monetize Every MCP Call** — Set country-specific markups, earn commission on every completed booking, and track orders, earnings, and payouts in real time. Flexible withdrawals for both businesses and individuals.
 
 ---
 
