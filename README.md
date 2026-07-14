@@ -22,15 +22,36 @@ An official Model Context Protocol (MCP) server that empowers AI Agents to searc
 
 Traditional AI agents can only recommend hotels based on static training datasets. The **DIDA Hotel MCP Server Global** equips your LLM agent with direct, real-time transactional capabilities:
 
-* 🏨 **2M+ Global Hotels**: Deep coverage of major destinations worldwide, returning multilingual room details.
-* ⚡ **110K+ Direct Partner Rates**: Live inventory checks, rate locks, and cancellation policy checks, ensuring the agent recommendations are bookable in real-time.
-* 💰 **Monetization Ready**: Configure your own markups in the DIDA Partner Center. When users book via your AI assistant, **you earn commissions directly**.
-* 🔌 **Client-Ready**: Instant integration with Cursor, Claude Desktop, Windsurf, ChatGPT, and other MCP-compliant applications.
+
+✅ **Live Rates & Bookable Inventory** — Zero-latency price verification with real-time availability; every result is instantly bookable.
+
+✅ **Battle-Tested Supply Chain** — The world's #3 travel B2B platform, 14 years in the making, fully API-native end to end.
+
+✅ **Global Hotel Network** — 2,000,000+ properties across every major destination.
+
+✅ **Direct Hotel Contracts** — 110,000+ directly connected hotels with live price and inventory sync.
+
+✅ **Multi-Source Supply** — 500+ integrated suppliers covering every tier, from luxury chains to local boutiques.
+
+✅ **Price Edge at Source** — Sourced upstream of OTAs; sharp rates on international hotels and hot spots like Shanghai, Hong Kong, Japan & Korea.
+
+✅ **Agent-Ready** — Works out of the box with 40+ leading AI coding agents: Cursor, Claude Code, Codex, Windsurf, Copilot, and more.
 
 ---
 
-## 🎯 Target Use Cases
+## 🎯 Who is it for
+• Companies or individual developers building AI Agents
 
+• Developers looking to integrate hotel booking capabilities into MCP Clients
+
+• Developers building travel planning, business travel management, OTA, and lifestyle service agents
+
+• Product teams seeking to validate AI Agent commercial transaction loops
+
+• Individual developers with needs for hotel search, price comparison, and price drop alerts
+
+## 🎯 Use Cases
+* **General-Purpose Agents**: Equip any AI agent with native hotel booking. Users can compare, filter, and book—all within a single natural-language conversation.
 * **AI Travel Planners**: Integrate hotel searching directly into natural language itineraries.
 * **Corporate Travel Assistants**: Allow employees to query, compare, and book business travel within Slack, Teams, or custom chat interfaces.
 * **Transactional Demos**: Validate end-to-end AI agent commerce and payment flows without heavy backend integration.
