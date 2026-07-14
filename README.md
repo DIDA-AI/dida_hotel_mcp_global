@@ -483,6 +483,17 @@ Retrieve metadata containing all filterable tag names (e.g., "Free WiFi", "Gym",
 }
 ```
 
+</details>
+
+## 💬 Support
+* 📧 **Email**: [york.lu@dida.com](mailto:york.lu@dida.com)
+* 🐛 **Issues**: Submit issues or feature requests on [GitHub Issues](https://github.com/DIDA-AI/dida_hotel_mcp_global/issues).
+* 💬 **Discord Community**: Join our [Discord Server](https://discord.gg/DvKcz7YnH) or scan the QR code below to connect with other developers, discuss integrations, and get real-time support from the DIDA team.
+
+<img src="discord-qr.png" width="300" alt="Discord Support" />
+
+---
+
 ## 🔣 If you want Local Deployment
 #### Method A: Run via `uv` (Recommended - Zero Config Setup)
 If you have [uv](https://github.com/astral-sh/uv) installed, run the server instantly:
@@ -507,13 +518,6 @@ python server.py
 The local server will run on `http://localhost:8000/mcp`, automatically forwarding requests to the secure DIDA global API nodes.
 
 ---
-
----
-
-</details>
-
----
-
 ## 🔑 Security & Headers
 * The local server forwards requests to the secure DIDA global API.
 * Always supply your API Key in the headers. Keys must start with `mcp_`.
@@ -523,15 +527,6 @@ The local server will run on `http://localhost:8000/mcp`, automatically forwardi
 
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 💬 Support
-* 📧 **Email**: [york.lu@dida.com](mailto:york.lu@dida.com)
-* 🐛 **Issues**: Submit issues or feature requests on [GitHub Issues](https://github.com/DIDA-AI/dida_hotel_mcp_global/issues).
-* 💬 **Discord Community**: Join our [Discord Server](https://discord.gg/DvKcz7YnH) or scan the QR code below to connect with other developers, discuss integrations, and get real-time support from the DIDA team.
-
-<img src="discord-qr.png" width="300" alt="Discord Support" />
 
 ---
 **Made with ❤️ by the DIDA Team**
